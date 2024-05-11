@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet"  type="text/css"  href="{% static 'style.css' %}">
+  <title>Weather Prediction</title>
+</head>
+<body style=" background-color: lightblue;">
+  <header>
+    <div class="navbar">
+        <ul>
+            <li> <a href="#l">Home</a></li>
+            <li> <a href="#">Weather</a></li>
+            <li> <a href="#">About</a></li>
+        </ul>
+
+    </div>
+  </header>
+   <main style="border: 10px solid" size>
+    <form action="{% url 'predict' %}" method="get" align="center">
+      <h1  align="center">Weather Prediction</h1>
+      <label for="precipitation">Precipitation (in mm):</label>
+      <input type="text" name="precipitation" required><br><br>
+     
+      <label for="temp-max">Maximum Temperature (°C):</label>
+      <input type="text" name="temp_max" required>
+      <br><br>
+      
+      <label for="temp-min">Minimum Temperature (°C):</label>
+      <input type="text" name="temp_min" required>
+      <br><br>
+      
+      <label for="wind">Wind Speed (km/h):</label>
+      <input type="text" name="wind" required>
+      <br><br>
+      
+      <input type="submit" value="Predict">
+      <br><br><br>
+    </form>
+    
+    <div id="weather-prediction">
+      <!-- Weather prediction results will be displayed here -->
+    </div>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
+
+</body>
+</html>

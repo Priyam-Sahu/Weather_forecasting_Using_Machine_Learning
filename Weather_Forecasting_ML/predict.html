@@ -1,0 +1,19 @@
+<!-- predict.html -->
+<html>
+<head>
+    <title>Weather Prediction</title>
+</head>
+<body>
+
+    <h1>Weather Prediction</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_result %}
+    <p>Prediction Result: {{ prediction_result }}</p>
+    {% endif %}
+
+</body>
+</html>

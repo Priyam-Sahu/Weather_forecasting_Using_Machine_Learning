@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css"  href="{% static 'style.css' %}">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <div class="first">
+            <video autoplay loop muted plays-inline>
+                
+                <source src="{% static 'v12.mp4' %}" type="video/mp4">
+
+            </video>
+       <div class="content">
+            <h1>Decoding Weather Patterns</h1>
+            <div>
+                <a href="{% url 'weather' %}"><button type="button">Check Weather</button></a>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li> <a href="{% url 'home' %}">Home</a></li>
+                <li> <a href="mlapp\templates\weather_form.html">Weather</a></li>
+            </ul>
+
+        </div>
+    </header>
+</body>
+</html>

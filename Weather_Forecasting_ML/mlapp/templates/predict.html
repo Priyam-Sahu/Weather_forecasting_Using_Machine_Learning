@@ -1,0 +1,26 @@
+<!-- predict.html -->
+{% load static %}
+<html>
+<head>
+    <title>Weather Prediction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css"  href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="first">
+            <video autoplay loop muted plays-inline>
+                
+                <source src="{% static 'sunny.mp4' %}" type="video/mp4">
+
+            </video>
+       <div class="content">
+            <h1> Prediction Result: {{ prediction }} </h1>  
+        </div>
+    </header>
+    <!---<div>
+    --prediction Result: {{ prediction }}-
+    </div>----->
+</body>
+</html>
